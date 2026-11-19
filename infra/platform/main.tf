@@ -32,7 +32,9 @@ resource "azurerm_log_analytics_workspace" "platform" {
 
   # Plafond d'ingestion quotidien en Go. Au-delà, la collecte s'arrête jusqu'au
   # lendemain : c'est le garde-fou budgétaire (0,1 Go par jour, quelques centimes).
-  daily_quota_gb = 0.1
+
+  daily_quota_gb = 0.2
+
 
   # Permet de donner accès aux journaux d'UNE ressource (via le RBAC de cette
   # ressource) sans donner accès à tout l'espace. Mode recommandé.
