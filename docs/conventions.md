@@ -48,6 +48,7 @@ Chaque groupe de ressources et chaque ressource qui les accepte portent :
 | bloc | b1, b2, b3, b4 | Bloc de séances |
 | cost-center | lab | Suivi des coûts |
 | lifecycle | permanent ou ephemeral | ephemeral = détruit automatiquement chaque nuit |
+| data-class | public, internal, confidential ou restricted | Sensibilité des données portées |
 
 Les tags sont posés par Terraform (locals communs), jamais à la main, sauf pendant
 les phases d'exploration manuelle du portail.
@@ -73,10 +74,11 @@ les phases d'exploration manuelle du portail.
 
 ## 6. Coûts
 
-- Budget mensuel de 40 EUR, avec alertes à 50, 75 et 100 % (réel) et 100 % (prévisionnel).
+- Budget mensuel de 40 EUR, avec alertes à 50, 75, 90 et 100 % (réel) et 100 % (prévisionnel).
 - Les ressources coûteuses (VM, firewall, Bastion, passerelle VPN) vont dans des groupes de
   ressources lifecycle = ephemeral, détruits chaque nuit.
 - Vérification du suivi des coûts à la fin de chaque séance.
+
 
 ## 7. Ce qui n'entre jamais dans le dépôt
 
