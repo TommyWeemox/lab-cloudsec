@@ -21,5 +21,6 @@ locals {
     bloc        = var.bloc
     cost-center = "lab"
     lifecycle   = "permanent" # la plateforme n'est pas détruite chaque nuit
+    data-class  = "internal"
   }
 }

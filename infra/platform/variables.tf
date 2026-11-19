@@ -72,6 +72,7 @@ variable "budget_notifications" {
   default = {
     actual_50    = { threshold = 50, threshold_type = "Actual" }
     actual_75    = { threshold = 75, threshold_type = "Actual" }
+    actual_90    = { threshold = 90, threshold_type = "Actual" }
     actual_100   = { threshold = 100, threshold_type = "Actual" }
     forecast_100 = { threshold = 100, threshold_type = "Forecasted" }
   }
